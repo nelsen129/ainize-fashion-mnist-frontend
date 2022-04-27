@@ -1,0 +1,1 @@
+# ainize-fashion-mnist-frontend
