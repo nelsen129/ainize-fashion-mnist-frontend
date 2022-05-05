@@ -32,8 +32,6 @@ def send_request(image_path):
     return status_code, response
 
 
-# send_request(test_image_path)
-
 st.title("Fashion-MNIST Classification")
 st.header("Classify Fashion-MNIST using TensorFlow and Convolutional Neural Networks")
 
