@@ -8,8 +8,6 @@ from PIL import Image
 
 api = 'https://main-ainize-fashion-mnist-nelsen129.endpoint.ainize.ai/predict'
 
-categories = ['T-shirt/Top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle Boot']
-
 
 def process_image(image_path):
     img = Image.open(image_path)
@@ -48,9 +46,7 @@ if image_file is not None:
         status_code, response = send_request(image_file)
         if status_code == 200:
             prediction = response.json()
-            max_score = max(prediction["prediction"])
-            category = categories[[i for i in range(len(categories)) if prediction["prediction"][i] == max_score][0]]
-            st.success(category)
+            st.success(prediction['prediction'])
         else:
             st.error(str(status_code) + " Error")
 
