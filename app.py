@@ -23,11 +23,8 @@ def process_image(image_path):
 
 def send_request(image_path):
     img_b64 = process_image(image_path)
-
-    headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-
-    payload = json.dumps({"image": img_b64})
-    response = requests.post(api, data=payload, headers=headers)
+    files = {'image': (None, img_b64)}
+    response = requests.post(api, files=files)
     status_code = response.status_code
     return status_code, response
 

@@ -36,3 +36,6 @@ After hitting submit, you should see the class of your prediction!
 
 For best results, I advise using a picture with a clear background and with the item clearly in focus. However, I would 
 also recommend trying to upload images that won't work so you can see the limitations of the model!
+
+You can learn more about the model behind this by reading this article 
+[here](https://medium.com/@pnelsen129/using-ainize-and-fashion-mnist-to-classify-images-of-clothing-and-accessories-45a8a6ebcb01)!
